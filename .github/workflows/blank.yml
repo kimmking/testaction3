@@ -29,16 +29,45 @@ jobs:
       - name: Run a multi-line script
         run: |
           export URL='https://dist.apache.org/repos/dist/release/shardingsphere/elasticjob-ui-3.0.0-beta/'
+          echo "======>"
           echo "======>elasticjob-3.0.0-beta-cloud-ui-bin.tar.gz"
-          wget ${URL}apache-shardingsphere-elasticjob-3.0.0-beta-cloud-ui-bin.tar.gz
-          tar zxvf apache-shardingsphere-elasticjob-3.0.0-beta-cloud-ui-bin.tar.gz
+          wget -q ${URL}apache-shardingsphere-elasticjob-3.0.0-beta-cloud-ui-bin.tar.gz
+          tar zx apache-shardingsphere-elasticjob-3.0.0-beta-cloud-ui-bin.tar.gz
           cd apache-shardingsphere-elasticjob-3.0.0-beta-cloud-ui-bin/lib
           ls -l | grep ^[^d] | awk '{print $9}'
           cd ../../
+          echo "======>"
           echo "======>elasticjob-3.0.0-beta-lite-ui-bin.tar.gz"
-          wget ${URL}apache-shardingsphere-elasticjob-3.0.0-beta-lite-ui-bin.tar.gz
-          tar zxvf apache-shardingsphere-elasticjob-3.0.0-beta-lite-ui-bin.tar.gz
+          wget -q ${URL}apache-shardingsphere-elasticjob-3.0.0-beta-lite-ui-bin.tar.gz
+          tar zx apache-shardingsphere-elasticjob-3.0.0-beta-lite-ui-bin.tar.gz
           cd apache-shardingsphere-elasticjob-3.0.0-beta-lite-ui-bin/lib
+          ls -l | grep ^[^d] | awk '{print $9}'
+          cd ../../
+          # ej
+          echo "======>"
+          echo "======>"
+          echo "======>"
+          echo "======> ej ej "
+          export URL='https://dist.apache.org/repos/dist/release/shardingsphere/elasticjob-3.0.0-beta/'
+          echo "======>"
+          echo "======>elasticjob-3.0.0-beta-cloud-scheduler-bin.tar.gz"
+          wget -q ${URL}apache-shardingsphere-elasticjob-3.0.0-beta-cloud-scheduler-bin.tar.gz
+          tar zx apache-shardingsphere-elasticjob-3.0.0-beta-cloud-scheduler-bin.tar.gz
+          cd     apache-shardingsphere-elasticjob-3.0.0-beta-cloud-scheduler-bin/lib
+          ls -l | grep ^[^d] | awk '{print $9}'
+          cd ../../
+          echo "======>"
+          echo "======>elasticjob-3.0.0-beta-cloud-executor-bin.tar.gz"
+          wget -q ${URL}apache-shardingsphere-elasticjob-3.0.0-beta-cloud-executor-bin.tar.gz
+          tar zx apache-shardingsphere-elasticjob-3.0.0-beta-cloud-executor-bin.tar.gz
+          cd     apache-shardingsphere-elasticjob-3.0.0-beta-cloud-executor-bin/lib
+          ls -l | grep ^[^d] | awk '{print $9}'
+          cd ../../
+          echo "======>"
+          echo "======>elasticjob-3.0.0-beta-lite-bin.tar.gz"
+          wget -q ${URL}apache-shardingsphere-elasticjob-3.0.0-beta-lite-bin.tar.gz
+          tar zx apache-shardingsphere-elasticjob-3.0.0-beta-lite-bin.tar.gz
+          cd apache-shardingsphere-elasticjob-3.0.0-beta-lite-bin/lib
           ls -l | grep ^[^d] | awk '{print $9}'
           cd ../../
           
